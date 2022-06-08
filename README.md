@@ -1,16 +1,5 @@
-# Вывод программы
-Если код без ошибок:
-![alt text](https://i.imgur.com/ppfneS1.png)
-![alt text](https://i.imgur.com/6ZivDm6.png)
-Если в коде имеются ошибки:
-![alt text](https://i.imgur.com/6CyzGnN.png)
-![alt text](https://i.imgur.com/KYgn7Y7.png)
-Обновленный лексер:
-![alt text](https://i.imgur.com/xyKBW7m.png)
-
-# Структура данных
-
-![alt text](https://i.imgur.com/TPd3jsh.jpg)
+### Работу выполнил Катков Кирилл ИВБО-04-20
+<br><br>
 
 # Отчет
 ## Требования:
@@ -19,7 +8,7 @@
 * For + While
 * ArrayList + HashMap
 
-## Структура:
+## Грамматика:
 ```
 lang -> expr+
   expr -> (assign_expr | stmt_if | loop_while | loop_for | io_console)
@@ -39,12 +28,4 @@ lang -> expr+
     stmt_loop_while -> KW_WHILE '(' condition ')' stmt_body
     stmt_if -> KW_IF '(' condition ')' stmt_body stmt_else?
       stmt_else -> KW_ELSE stmt_body
-```
-
-## Упрощения:
-```
-  '(')' -> SEP_ _BRACKET
-  '{'}' -> SEP_ _BRACE
-  ';' -> SEP_SEMICOLON
-  ';3' -> SEP_END_LINE
 ```
