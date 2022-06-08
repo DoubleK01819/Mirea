@@ -5,7 +5,7 @@ public class Main {
 
 	public static String checkFile(){
 		String code="";
-		try(FileReader reader = new FileReader("Code.txt"))
+		try(FileReader reader = new FileReader("/Users/kiryxa/Downloads/DSL-main/src/Code.txt"))
 		{
 			int c;
 			while((c=reader.read())!=-1){
@@ -21,13 +21,13 @@ public class Main {
 
     public static void main(String[] args) {
 		String s=checkFile();
-		System.out.println(ANSI_BLUE + "\n\nИсходный код программы:" + ANSI_WHITE);
+		System.out.println("\n\nИсходный код программы:");
 		System.out.println(s);
-		System.out.printf("\n" + ANSI_BLUE + "\nЗначения лексера:" + ANSI_WHITE);
+		System.out.printf("\n" + "\nЗначения лексера:");
 		Lexer lexer=new Lexer(s);
 		Parser parser=new Parser(lexer.analyze());
-		System.out.println("\n" + ANSI_PURPLE + "[n] " + ANSI_WHITE + "- номер токена данных." + ANSI_WHITE);
-		System.out.println(ANSI_BLUE + "\nВычисления интерпретатора:" + ANSI_WHITE);
+		System.out.println("\n" + "[n] " + "- номер токена данных.");
+		System.out.println("\nВычисления интерпретатора:");
 		RootNode root=parser.parseTokens();
 		Interpreter interpreter =new Interpreter();
 		for(int i = 0; i<root.codeStr.size(); i++) {

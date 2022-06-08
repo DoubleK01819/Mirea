@@ -19,7 +19,7 @@ public class Lexer {
         while(findTokens()){}
         for (Token token : tokenList)
             if (!(token.value.equals(" ") || token.value.equals("\\r")))
-            System.out.printf("\n" + "Token [ " + ANSI_BLUE + token.type.typeName + ANSI_WHITE + "  :  " + ANSI_GREEN + token.value + ANSI_WHITE + " ]" + "                            Token Pos. [" + ANSI_PURPLE + token.pos + ANSI_WHITE + "]");
+            System.out.printf("\n" + "Token [ " + token.type.typeName + "  :  " + token.value + " ]" + "                            Token Pos. [" + token.pos + "]");
         return this.tokenList;
     }
     public boolean findTokens(){
